@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load staticfiles %}
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Open+Sans" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="{%static 'belt_app/css/style.css' %}">
+
+  </head>
+  <body>
+    <div class="navbar">
+        <img class="logo" src="{% static 'belt_app/img/cdlogo.png'%}" alt="">
+        <p class="app_title">Belt Exam</p>
+      <div id="nav_elements">
+          <li><a class="no_decoration" href="/">Home</a></li>
+          <li><a class="no_decoration" href="/register">Register</a></li>
+      </div>
+    </div>
+    <!-- COPY ABOVE FOR HEADER -->
+    <div class="error">
+      {% for message in messages %}
+      <p>{{ message }}</p>
+      {% endfor %}
+    </div>
+    <h1>Hello Belt App</h1>
+  </body>
+</html>
